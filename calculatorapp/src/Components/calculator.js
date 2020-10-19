@@ -10,7 +10,7 @@ class Calculator extends React.Component { constructor() {
 	// set our default state 
 	this.state = { 
 	question: '', 
-	answer: ''
+	answer: '',
 	} 
 
 	// Bind our handleClick method (sets 'this' explicitly 
@@ -19,24 +19,26 @@ class Calculator extends React.Component { constructor() {
 	this.handleClick = this.handleClick.bind(this); 
 } 
 // our method to handle all click events from our buttons 
-handleClick(event){ 
+handleClick(event){
+	
 
 	// get the value from the target element (button) 
 	const value = event.target.value;
+	
 	 
 	
 	switch (value) { 
 		
-		case '=': { 
-	
+		case '=': {
 		// if it's an equal sign, use the eval module 
 		// to evaluate the question ,convert the answer 
 		// (in number) to String 
 		if (this.state.question!=='') 
 		{ 
-			var ans=''; 
+			let ans=''; 
 				try
 				{ 
+					// eslint-disable-next-line
 					ans = eval(this.state.question); 
 				} 
 				catch(err) 
@@ -51,7 +53,8 @@ handleClick(event){
 					this.setState({ answer: ans , question: ''}); 
 				break; 
 			} 
-		} 
+		}
+		break 
 		case 'Clear': { 
 	
 		// if it's the Clears sign, just clean our 
@@ -61,7 +64,7 @@ handleClick(event){
 		} 
 	
 		case 'Delete': { 
-		var str = this.state.question; 
+		let str = this.state.question; 
 			str = str.substr(0,str.length-1); 
 			this.setState({question: str}); 
 			break; 
