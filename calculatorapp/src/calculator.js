@@ -1,16 +1,11 @@
 // Imports. 
+
 import React from 'react'
 import CalculatorTitle from './calculatorTitle.js'; 
 import OutputScreen from './outputScreen.js'; 
 import Button from './button.js'; 
   
-// Create a Class Component Calculator. 
-class Calculator extends React.Component { 
-    render() 
-    { 
-        return "Sezzle Calculator"; 
-    } 
-} 
+// Create a Class Component Calculator and render HTML
 
 class Calculator extends React.Component { 
     render() 
