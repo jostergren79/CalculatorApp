@@ -1,8 +1,8 @@
 // Imports. 
 import React from 'react'; 
-import CalculatorTitle from './calculatorTitle.js'; 
-import OutputScreen from './outputScreen.js'; 
-import Button from './button.js'; 
+import CalculatorTitle from './calculatorTitle'; 
+import OutputScreen from './outputScreen'; 
+import Button from './button';
 
 class Calculator extends React.Component { constructor() { 
 	super(); 
@@ -22,9 +22,11 @@ class Calculator extends React.Component { constructor() {
 handleClick(event){ 
 
 	// get the value from the target element (button) 
-	const value = event.target.value; 
+	const value = event.target.value;
+	 
 	
 	switch (value) { 
+		
 		case '=': { 
 	
 		// if it's an equal sign, use the eval module 
