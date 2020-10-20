@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import Button from "./button";
 import Display from './display';
+import Storeddata from './storeddata';
+
 
 class App extends Component {
-    constructor(){
+	
+	constructor(){
         super();
 
         this.state = {
@@ -28,7 +31,7 @@ class App extends Component {
             this.setState({
                 result: this.state.result + button
             })
-        }
+        } 
     };
 
 
@@ -65,6 +68,7 @@ class App extends Component {
                     <h1>Simple Calculator</h1>
                     <Display result={this.state.result}/>
                     <Button onClick={this.onClick}/>
+					<Storeddata result={this.state.results}/>
                 </div>
             </div>
         );
