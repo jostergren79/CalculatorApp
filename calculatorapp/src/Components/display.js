@@ -1,7 +1,6 @@
-// Import React (Mandatory Step). 
-import React from 'react'; 
+import React, {Component} from 'react';
 
-class OutputScreen extends React.Component {
+class Display extends Component {
 
 
     render() {
@@ -15,5 +14,4 @@ class OutputScreen extends React.Component {
     }
 }
 
-// Export Output Screen. 
-export default OutputScreen; 
+export default Display; 
