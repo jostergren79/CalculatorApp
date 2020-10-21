@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
 
-class Display extends Component {
+class Output extends Component {
 
 
     render() {
         let {result} = this.props;
+        console.log(this.props)
         return (
             <div className="result">
                 <p>{result}</p>
@@ -14,4 +15,4 @@ class Display extends Component {
     }
 }
 
-export default Display; 
+export default Output; 

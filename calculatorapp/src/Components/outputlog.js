@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class Storeddata extends Component {
+class Outputlog extends Component {
 
 render() {
         
@@ -21,4 +21,4 @@ render() {
     }
 }
 
-export default Storeddata; 
+export default Outputlog; 

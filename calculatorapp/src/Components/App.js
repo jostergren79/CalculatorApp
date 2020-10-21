@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Button from "./button";
-import Display from './display';
-import Storeddata from './storeddata';
+import Input from "./input";
+import Output from './output';
+import Outputlog from './outputlog';
 
 
 class App extends Component {
@@ -17,7 +17,9 @@ class App extends Component {
     onClick = button => {
 
         if(button === "="){
-            this.calculate()
+			this.calculate()
+			// this.logoutput()
+//after running calculate() i need to push the entire equation to the output log and store in local storage
         }
 
         else if(button === "C"){
@@ -59,20 +61,24 @@ class App extends Component {
         this.setState({
             result: this.state.result.slice(0, -1)
         })
-    };
+	};
+	
+	// logoutput() = () => {
+     
+	// };
 
     render() {
         return (
             <div>
                 <div className="calculator-body">
                     <h1>Simple Calculator</h1>
-                    <Display result={this.state.result}/>
-                    <Button onClick={this.onClick}/>
-					<Storeddata result={this.state.results}/>
+                    <Output result={this.state.result}/>
+                    <Input onClick={this.onClick}/>
+					<Outputlog resultlog={this.state.resultlogs}/>
                 </div>
             </div>
         );
-    }
+	}
 }
 
 export default App;
