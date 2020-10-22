@@ -1,0 +1,13 @@
+#root {
+    height: 100vh;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.p {
+    border-width: 10px;
+    border-style: solid;
+    border-color: burlywood;
+}

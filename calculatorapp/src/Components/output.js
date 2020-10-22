@@ -5,10 +5,12 @@ class Output extends Component {
 
     render() {
         let {result} = this.props;
-        console.log(this.props)
+        console.log(result)
         return (
-            <div className="result">
-                <p>{result}</p>
+           <div className="resultscreen">
+           <div className="result">
+                <p> Result Screen {result} </p>
+            </div>
             </div>
     )
         ;

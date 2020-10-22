@@ -18,8 +18,6 @@ class App extends Component {
 
         if(button === "="){
 			this.calculate()
-			// this.logoutput()
-//after running calculate() i need to push the entire equation to the output log and store in local storage
         }
 
         else if(button === "C"){
@@ -62,23 +60,23 @@ class App extends Component {
             result: this.state.result.slice(0, -1)
         })
 	};
-	
-	// logoutput() = () => {
-     
-	// };
 
-    render() {
-        return (
-            <div>
-                <div className="calculator-body">
-                    <h1>Simple Calculator</h1>
-                    <Output result={this.state.result}/>
-                    <Input onClick={this.onClick}/>
-					<Outputlog resultlog={this.state.resultlogs}/>
-                </div>
-            </div>
-        );
-	}
+
+render() {
+	return (
+		<div>
+			<div className="calculator-body">
+				<h1>Sezzle Calculator</h1>
+				<Output result={this.state.result}/>
+				<Input onClick={this.onClick}/>
+				<Outputlog resultstorage={this.state.resultstorage}/>
+			</div>
+		</div>
+	);
 }
+}
+
+
+
 
 export default App;
