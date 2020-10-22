@@ -5,6 +5,7 @@ import Outputlog from './outputlog';
 
 
 class App extends Component {
+    
 	
 	constructor(){
         super();
@@ -17,7 +18,7 @@ class App extends Component {
     onClick = button => {
 
         if(button === "="){
-			this.calculate()
+            this.calculate()
         }
 
         else if(button === "C"){
@@ -29,7 +30,7 @@ class App extends Component {
 
         else {
             this.setState({
-                result: this.state.result + button
+				result: this.state.result + button
             })
         } 
     };
@@ -39,7 +40,7 @@ class App extends Component {
         try {
             this.setState({
                 // eslint-disable-next-line
-                result: (eval(this.state.result) || "" ) + ""
+				result: (eval(this.state.result) || "" ) + ""
             })
         } catch (e) {
             this.setState({
@@ -59,12 +60,16 @@ class App extends Component {
         this.setState({
             result: this.state.result.slice(0, -1)
         })
-	};
+    };
 
-
+    
 render() {
+
 	return (
-		<div>
+        
+		<div class="table-responsive">
+  <table class="table">
+  <div>
 			<div className="calculator-body">
 				<h1>Sezzle Calculator</h1>
 				<Output result={this.state.result}/>
@@ -72,11 +77,11 @@ render() {
 				<Outputlog resultstorage={this.state.resultstorage}/>
 			</div>
 		</div>
+  </table>
+</div>
+		
 	);
 }
 }
-
-
-
 
 export default App;

@@ -1,17 +1,18 @@
-import React, {Component} from 'react';
+import React, * as react from 'react';
 
-class Output extends Component {
+class Output extends react.Component {
 
 
     render() {
+       
         let {result} = this.props;
-        console.log(result)
+
         return (
-           <div className="resultscreen">
-           <div className="result">
-                <p> Result Screen {result} </p>
+          
+            <div>
+                <p>{result}</p>
             </div>
-            </div>
+            
     )
         ;
     }

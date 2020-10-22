@@ -3,8 +3,15 @@ import React, {Component} from 'react';
 class Input extends Component {
 
     render() {
+        const mystyle = {
+            color: "white",
+            backgroundColor: "ForestGreen",
+            padding: "10px",
+            fontFamily: "Arial"
+        }
+    
         return (
-            <div className="button">
+            <div style ={mystyle}className="button">
                 <button className="function"name="(" onClick={e => this.props.onClick(e.target.name)}>(</button>
                 <button name="CE" onClick={e => this.props.onClick(e.target.name)}>CE</button>
                 <button name=")" onClick={e => this.props.onClick(e.target.name)}>)</button>
