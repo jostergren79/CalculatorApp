@@ -23,7 +23,7 @@ class Frame extends React.Component {
     return (
       <div className="frame">
         <div className="calculator-title">
-          R_N Calculator
+          Sezzle Calculator
         </div>
         <Screen question={this.state.question} answer={this.state.answer}/>
         <div className="button-row">
