@@ -9665,7 +9665,8 @@ var Frame = function (_React$Component) {
 
     _this.state = {
       question: '',
-      answer: ''
+      answer: '',
+      equation: ''
       // Bind our handleClick method (sets 'this' explicitly to refer to this componenent)
       // We did this because 'this' would refer to the source of the click events
     };_this.handleClick = _this.handleClick.bind(_this);
@@ -9686,9 +9687,9 @@ var Frame = function (_React$Component) {
         _react2.default.createElement(
           'div',
           { className: 'calculator-title' },
-          'R_N Calculator'
+          'Sezzle Calculator'
         ),
-        _react2.default.createElement(_screen2.default, { question: this.state.question, answer: this.state.answer }),
+        _react2.default.createElement(_screen2.default, { question: this.state.question, answer: this.state.answer, equation: this.state.equation }),
         _react2.default.createElement(
           'div',
           { className: 'button-row' },
@@ -9730,14 +9731,32 @@ var Frame = function (_React$Component) {
       switch (value) {
         case '=':
           {
+            var updateLog = function updateLog(equation) {
+              array.push(equation);
+              console.log(array);
+            };
+
             // if it's an equal sign, use the eval module to evaluate the question
             // convert the answer (in number) to String
             // eslint-disable-next-line
             var answer = eval(this.state.question).toString();
+
+            var equation = this.state.question + "=" + answer;
+
+            console.log(equation);
+
             // update answer in our state.
             this.setState({ answer: answer });
-            break;
+            // update equation to our sate
+            this.setState({ equation: equation });
+            // store equation in array
+            // define array with maximum length 10 
+            var array = ["1+1=3"];
+
+            updateLog(equation);
           }
+          break;
+
         case 'Cls':
           {
             // if it's the Cls sign, just clean our question and answer in the state
@@ -9748,6 +9767,7 @@ var Frame = function (_React$Component) {
           {
             // for every other commmand, update the answer in the state
             this.setState({ question: this.state.question += value });
+            console.log();
             break;
           }
       }
@@ -9838,18 +9858,19 @@ var Screen = function Screen(props) {
     'div',
     { className: 'screen' },
     _react2.default.createElement(_screenRow2.default, { value: props.question }),
-    _react2.default.createElement(_screenRow2.default, { value: props.answer })
+    _react2.default.createElement(_screenRow2.default, { value: props.equation })
   );
+
+  // Define our props expected from the parent component
+  Screen.propTypes = {
+    question: _react2.default.PropTypes.string.isRequired,
+    answer: _react2.default.PropTypes.string.isRequired
+  };
 };
 
-// Define our props expected from the parent component
+// export our component
 // Import react module
-Screen.propTypes = {
-  question: _react2.default.PropTypes.string.isRequired,
-  answer: _react2.default.PropTypes.string.isRequired
-
-  // export our component
-};exports.default = Screen;
+exports.default = Screen;
 
 /***/ }),
 /* 86 */
@@ -9909,7 +9930,7 @@ var _frame2 = _interopRequireDefault(_frame);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // import our frame component
-// import './client/styles/main.css'; // import our external css file
+
 
 // using the render method, we will mount this node into our DOM (html file)
 // on the element with id of 'app'

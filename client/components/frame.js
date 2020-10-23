@@ -9,7 +9,8 @@ class Frame extends React.Component {
     // set our default state
     this.state = {
       question: '',
-      answer: ''
+      answer: '',
+      equation: '',
     }
     // Bind our handleClick method (sets 'this' explicitly to refer to this componenent)
     // We did this because 'this' would refer to the source of the click events
@@ -25,7 +26,7 @@ class Frame extends React.Component {
         <div className="calculator-title">
           Sezzle Calculator
         </div>
-        <Screen question={this.state.question} answer={this.state.answer}/>
+        <Screen question={this.state.question} answer={this.state.answer} equation={this.state.equation}/>
         <div className="button-row">
           <Button label={'1'} handleClick={this.handleClick} type='input' />
           <Button label={'2'} handleClick={this.handleClick} type='input' />
@@ -61,10 +62,29 @@ class Frame extends React.Component {
         // convert the answer (in number) to String
         // eslint-disable-next-line
         const answer = eval(this.state.question).toString();
+        
+        const equation = (this.state.question + "=" + answer);
+        
+        console.log(equation)
+    
         // update answer in our state.
         this.setState({ answer });
-        break;
+        // update equation to our sate
+        this.setState({ equation });
+        // store equation in array
+        // define array with maximum length 10 
+        let array = [];
+  
+        function updateLog (equation) {
+          array.push(equation);
+          console.log(array)
+          
       }
+      
+      updateLog(equation)
+      }
+        break;
+
       case 'Cls': {
         // if it's the Cls sign, just clean our question and answer in the state
         this.setState({ question: '', answer: '' });
@@ -73,6 +93,7 @@ class Frame extends React.Component {
       default: {
         // for every other commmand, update the answer in the state
         this.setState({ question: this.state.question += value})
+        console.log()
         break;
       }
     }

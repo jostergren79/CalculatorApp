@@ -8,7 +8,8 @@ const Screen = (props) => {
   return (
     <div className="screen">
       <ScreenRow value={props.question}/>
-      <ScreenRow value={props.answer} />
+      {/* <ScreenRow value={props.answer} /> */}
+      <ScreenRow value={props.equation} />
     </div>
   );
 
