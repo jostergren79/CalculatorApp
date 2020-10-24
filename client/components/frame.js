@@ -71,20 +71,8 @@ class Frame extends React.Component {
         this.setState({ answer });
         // update equation to our sate
         this.setState({ equation });
-        // define array with maximum length 10 
-        let array = ["",...Slice(0,10)];
-        
-        // update array with equation
-        function updateLog () {
-          array.push(equation);
-        // set state of array  
-          this.setState({ array });
-
-          console.log(array)
+  
           
-      }
-      
-      updateLog()
       }
         break;
 
