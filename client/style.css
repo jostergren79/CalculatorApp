@@ -101,7 +101,7 @@ ol {
 }
 
 .btn {
-  box-shadow: inset 0px -1px 0px 0px #ffffff;
+  box-shadow: inset 0px -1px 0px 0px #999;
   background: linear-gradient(to bottom, #ffffff 5%, #eeeeee 100%);
   border-radius: 3rem;
   padding: 5px 0;

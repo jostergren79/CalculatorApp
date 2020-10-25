@@ -1,9 +1,9 @@
 {
-  "name": "socket-calc",
+  "name": "sezzlereactcalculator",
   "version": "0.0.1",
   "description": "Code challenge entry for Sezzle",
   "main": "server.js",
-  "author": "T. Andrew Taton",
+  "author": "Jason Ostergren",
   "license": "MIT",
   "dependencies": {
     "express": "^4.16.3",
@@ -17,6 +17,6 @@
   },
   "devDependencies": {
     "big.js": "^5.1.2",
-    "nodemon": "^1.18.4"
+    "nodemon": "^1.19.4"
   }
 }

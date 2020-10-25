@@ -100,9 +100,9 @@ document.getElementById('decimal-point').addEventListener('click', () => {
   } // else decimal point has already been added; ignore
 });
 
-const subCalc = (big1, operator, big2) => big1[operator](big2);
+subCalc = (big1, operator, big2) => big1[operator](big2);
 
-const calcReduce = operator => {
+calcReduce = operator => {
   while (calculation.includes(operator)) {
     const calcPoint = calculation.indexOf(operator);
     calculation = [
@@ -114,7 +114,7 @@ const calcReduce = operator => {
 };
 
 // Calculate function.
-const calculate = () => {
+calculate = () => {
   const calcString = parseCalcArray();
   for (let i = 0; i < calculation.length; i += 2) {
     calculation[i] = new Big(calculation[i]);
@@ -143,7 +143,7 @@ document.getElementById('equals').addEventListener('click', () => {
   }
 });
 
-const updateDisplay = () => {
+updateDisplay = () => {
   currentValueEl.textContent = currentValue
     ? currentValue
     : prevResult
