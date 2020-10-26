@@ -8,13 +8,17 @@ This application was designed as part of a coding exercise for Sezzle.
 - calculations are updated in real-time and stored across sessions
 - The last 10 calculations are logged below the calculator in descending order, newest to oldest
 
-# Libraries 
+# Primary Language
+
+- javaScript
+
+# Libraries
 
 - Express.js https://www.npmjs.com/package/express
 - Big.js  https://www.npmjs.com/package/big.js?activeTab=readme
-- Socket.io  https://www.npmjs.com/package/socket.io-client
+- Socket.io https://socket.io/
 
-# Hosted
+# Application Host
 
 - Heroku https://sezzlereactcalculator.herokuapp.com/
 
