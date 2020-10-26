@@ -10,7 +10,7 @@ This application was designed as part of a coding exercise for Sezzle.
 
 # Primary Language
 
-- javaScript
+- JavaScript
 
 # Libraries
 
