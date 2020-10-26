@@ -14,31 +14,31 @@ const currentValueEl = document.getElementById('current-value');
 const currentCalcEl = document.getElementById('calc-content');
 const calcReportEl = document.getElementById('calc-report');
 
-const addDigit = digit => {
+addDigit = digit => {
   currentValue = currentValue === '0' ? digit : currentValue + digit;
 };
 
-const clearValue = () => {
+clearValue = () => {
   currentValue = initialValue;
 };
 
-const clearPrevResult = () => {
+clearPrevResult = () => {
   prevResult = initialValue;
 };
 
-const addCalc = (value, operatorString) => {
+addCalc = (value, operatorString) => {
   calculation.push(value, operatorString);
   clearPrevResult();
   clearValue();
 };
 
-const clearAll = () => {
+clearAll = () => {
   calculation = [];
   clearPrevResult();
   clearValue();
 };
 
-const addOperator = operatorString => {
+addOperator = operatorString => {
   if (currentValue.length === 0) {
     if (calculation.length === 0) {
       if (prevResult.length === 0) {
@@ -61,7 +61,7 @@ const addOperator = operatorString => {
   console.log(calculation);
 };
 
-const parseCalcArray = () =>
+parseCalcArray = () =>
   calculation
     .join(' ')
     .replace('plus', '+')

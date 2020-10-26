@@ -9,21 +9,25 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.3;
-  background-color: #dddddd;
+  background-color: #382757;
 }
 
 header {
   text-align: center;
   margin-top: 1rem;
+  color: 
+
 }
 
 div.container {
   width: 320px;
   min-height: 480px;
-  background-color: #ffffff;
+  background-color: mediumspringgreen;
   margin: 10px auto;
-  border-radius: 10px;
+  border-width: 4px;
+  border-style: ridge;
 }
+
 
 div.row {
   margin: 0 auto;
@@ -33,26 +37,32 @@ div.row {
 div.name-entry {
   text-align: center;
   padding: 10px 0;
+  border-color: #382757;
 }
 
 label {
   display: inline-block;
   font-size: 1rem;
+  padding: 5px;
 }
+
 
 input {
   display: inline-block;
   margin-left: 10px;
   height: 30px;
-  border: 1px solid black;
+  border: 2px inset;
   border-radius: 3px;
   padding: 0 10px;
   font-size: 1rem;
+  color: white;
+  background-color: black;
 }
 
 div#output {
-  background-color: #000000;
-  padding: 5px 0;
+  background-color: #382757;
+  padding: 10px 0;
+  margin-bottom: 5px;
 }
 
 div#current-value {
@@ -60,11 +70,12 @@ div#current-value {
   margin: 10px auto;
   padding: 0 10px;
   height: 45px;
-  border: 1px solid #ffffff;
   border-radius: 3px;
-  color: #ffffff;
+  color: white;
   font-size: 2rem;
   text-align: right;
+  background-color: black;
+  border-style: inset;
 }
 
 div#current-calc {
@@ -72,7 +83,7 @@ div#current-calc {
   width: 95%;
   margin: 10px auto;
   min-height: 20px;
-  color: #ffffff;
+  color: white;
   font-size: 0.8rem;
   text-align: left;
 }
@@ -88,10 +99,10 @@ ol {
 }
 
 .heading-primary {
-  color: #000000;
+  color: white;
 }
 .heading-subheading {
-  color: #000000;
+  color: #382757;
 }
 
 .btn,
@@ -101,19 +112,18 @@ ol {
 }
 
 .btn {
-  box-shadow: inset 0px -1px 0px 0px #999;
-  background: linear-gradient(to bottom, #ffffff 5%, #eeeeee 100%);
+  box-shadow: inset 1px -3px 2px 2px #999;
+  background: linear-gradient(to bottom, #382757 70%, #eeeeee 100%);
   border-radius: 3rem;
   padding: 5px 0;
   transition: all 0.2s;
-  font-size: 1.6rem;
+  font-size: x-large;
   font-weight: bold;
   border: 0.5rem;
   cursor: pointer;
-}
-
-.btn:hover {
-  background: linear-gradient(to bottom, #eeeeee 5%, #ffffff 100%);
+  color: white;
+  padding: initial;
+  margin-bottom: 2px;
 }
 
 .btn:active {
@@ -124,9 +134,16 @@ ol {
 .calc-footer {
   width: 100%;
   margin: 10px 0;
+  border-style: groove;
+  border-width: 4px;
+  background: black;
+  color: white;
 }
+
 
 li {
   margin: 0 10px;
   padding-left: 0;
 }
+
+
